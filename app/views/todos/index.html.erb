@@ -1,0 +1,17 @@
+
+
+<div class= well >
+	<h1> Formulario </h1>
+<% @todos.each do |todo| %>
+	<p> <%= todo.description %> </p> 
+	<p> <%= todo.completed %> </p>
+	<button><%= link_to 'New Field', todos_new_path %></button> 
+	<button><%= link_to 'Show', todo_path(todo.id)%></button> 
+	<button><%= link_to 'Edit', edit_path(todo.id)%></button>
+	<button><%= link_to 'Delete', todo, method: :delete%> </button>
+	<button><%= link_to 'Completed', complete_todo_path(todo.id) %> </button>
+	
+<% end %>
+
+
+</div>

@@ -1,0 +1,12 @@
+
+
+<div class= well >
+	<h1> Ingresa los campos </h1>
+<%= form_with model: @todo do |form| %>
+ <%= form.label :description, "Descripción" %>
+ <%= form.text_field :description %>
+ <%= form.label :completed, "Completado" %>
+ <%= form.check_box :completed %>
+ <%= form.submit "Enviar" %>
+<% end %>
+</div>
