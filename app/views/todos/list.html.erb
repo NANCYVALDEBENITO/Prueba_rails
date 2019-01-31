@@ -3,30 +3,39 @@
   <div class="col-md-6">
 
   	<h2>No completados</h2>
-  	<div class= well>
-	  	<% @todos.each do |todo| %>
-	  		<% if todo.completed == false %>
-	  			<p> <%= todo.description %> </p> 
-				<p> <%= todo.completed %> </p>
-	  		<% end%>
-		
-		<% end %>
-	</div>
+  	<br>
+  	<% @todos.each do |todo| %>
+  		<% if todo.completed == false %>
+  			<div class="col-md-5">
+	  			<p> Descripción: <%= todo.description %> </p> 
+	  		</div>
+	  		<div class="col-md-5">
+	  			<p> Completo   : <%= todo.completed %> </p>
+			</div>
+				
+  		<% end%>
+	
+	<% end %>
+	
 
   </div>
 
   <div class="col-md-6">
 
   	<h2>Completos</h2>
-  	<div class= well>
-	  	<% @todos.each do |todo| %>
-	  		<% if todo.completed == true %>
-	  			<p> <%= todo.description %> </p> 
-				<p> <%= todo.completed %> </p>
-	  		<% end%>
-		
-		<% end %>
-	</div>
+  	<br>
+  	<% @todos.each do |todo| %>
+  		<% if todo.completed == true %>
+  			<div class="col-md-5">
+	  			<p> Descripción: <%= todo.description %> </p> 
+	  		</div>
+	  		<div class="col-md-5">
+	  			<p> Completo   : <%= todo.completed %> </p>
+			</div>
+  		<% end%>
+	
+	<% end %>
+	
   </div>
 
 </div>
