@@ -3,13 +3,13 @@
 <h1> Formulario </h1>
 <% @todos.each do |todo| %>
 	<div class= well >
-	<p> <%= todo.description %> </p> 
-	<p> <%= todo.completed %> </p>
-	<button><%= link_to 'New Field', todos_new_path %></button> 
-	<button><%= link_to 'Show', todo_path(todo.id)%></button> 
-	<button><%= link_to 'Edit', edit_path(todo.id)%></button>
-	<button><%= link_to 'Delete', todo, method: :delete%> </button>
-	<button><%= link_to 'Completed', complete_todo_path(todo.id) %> </button>
+	<p> Descripción: <%= todo.description %> </p> 
+	<p> Completado : <%= todo.completed %> </p>
+	<button type="button" class="btn btn-info"><%= link_to 'New Field', todos_new_path %></button> 
+	<button type="button" class="btn btn-light"><%= link_to 'Show', todo_path(todo.id)%></button> 
+	<button type="button" class="btn btn-success"><%= link_to 'Edit', edit_path(todo.id)%></button>
+	<button type="button" class="btn btn-danger"><%= link_to 'Delete', todo, method: :delete%> </button>
+	<button type="button" class="btn btn-secondary"><%= link_to 'Completed', complete_todo_path(todo.id) %> </button>
 	</div>
 <% end %>
 
