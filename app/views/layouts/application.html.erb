@@ -9,9 +9,22 @@
   		
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+  	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><%= link_to "Index",todos_path, class:"dropdown-header" %></li>
+		        <li><%= link_to "List", todos_list_path, class:"dropdown-header" %></li>
+		        <li><%= link_to "New", todos_new_path, class:"dropdown-header" %></li>
+		        
+		      </ul>
+		 	</div>
+		</div>
+	</nav> <br> <br>
     <%= yield %>
   </body>
 </html>
